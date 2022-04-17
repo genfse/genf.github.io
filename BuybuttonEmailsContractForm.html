@@ -58,11 +58,11 @@ name="EmailForm">
     </tr>
     <tr>
       <td><input type="text" value="Barn 1*"  name="G1P1_förnamn"></td>
-      <td><input type="text" value="Barn 1*" name="G1P1_efternamn"></td>
+      <td><input type="text" name="G1P1_efternamn"></td>
     </tr>
     <tr>
       <td><input type="text" value="Barn 2"  name="G1P2_förnamn"></td>
-      <td><input type="text" value="Barn 2" name="G1P2_efternamn"></td>
+      <td><input type="text" name="G1P2_efternamn"></td>
     </tr>
     <tr>
       <td><input type="text" name="G1P3_förnamn"></td>
@@ -72,14 +72,14 @@ name="EmailForm">
 
   <h2>Generation 2</h2>
 
-  <table style="width:100%", pattern="/^-?\d+\.?\d*$/">
+  <table style="width:100%">
     <tr>
       <td>Förnamn:</td>
       <td>Efternamn:</td>
     </tr>
     <tr>
       <td><input type="text" value="Barnbarn 1"  name="G1P1_förnamn"></td>
-      <td><input type="text" value="Barnbarn 1" name="G1P1_efternamn"></td>
+      <td><input type="text" name="G1P1_efternamn"></td>
     </tr>
     <tr>
       <td><input type="text" name="G2P2_förnamn"></td>
@@ -101,15 +101,26 @@ name="EmailForm">
 
     <h2>Av sekretess-skäl ifylls personnr och/eller banknr/mobilnr(swish) för hand på GENF kontraktet som postas till kund.</h2>
 
+    <table style="width:100%" cellspacing="20">
+      <tr>
+        <td>Startkapital (SEK, beloppet anges på fakturan):</td>
+        <td><input type="text" name="startkapital" size="200"></td>
+      </tr>
+      <tr>
+        <td>Utdelning endast vinstår:</td>
+        <td><input type="checkbox" name="utd_vinstår"><br></td>
+      </tr>
+      <tr>
+        <td>Arvtagare som begått brott (allvarligare än böter) och får prick i brottsregistret blir struken från sin rätt till utdelning:</td>
+        <td><input type="checkbox" name="brott"></td>
+      </tr>
+    </table>
 
-    <br><br>
-    Email:<br>
-    <input type="email" name="Contact-Email"><br><br> 
+
+    <br>
     Förmögenhets namn (ex. "GENF T.Jahnson"):<br> 
     <input type="text" name="GENF_namn"><br><br> 
-    Övrig information att tillägga:<br> 
-    <textarea name="Contact-Message" rows="6″ cols="20″>
-    </textarea><br><br>
+
     <button type="submit" class="button button1" value="Submit">Godkänn & beställ!</button>
 </form>
 
