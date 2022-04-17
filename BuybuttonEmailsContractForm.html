@@ -1,0 +1,118 @@
+<!-- Sample HTML Form -->
+<!--https://blog.getform.io/how-to-create-an-html-form-that-sends-you-an-email/-->
+<!DOCTYPE html>
+<html>
+<style>
+body {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+table, th, td {
+  border:0px solid black;
+}
+input {
+  width: 100%;
+}
+h2 {
+  color: rgb(0, 25, 138);
+}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {background-color: #008CBA;} /* Blue */
+</style>
+</head>
+</style>
+<body>
+
+
+
+<form action="mailto:genf.se@gmail.com?subject=Ny GENF"
+method="POST"
+enctype="multipart/form-data"
+name="EmailForm">
+
+<h2>Generation 1</h2>
+
+<table style="width:100%">
+    <tr>
+      <td>Namn:</td>
+      <td>Personnr:</td>
+      <td>Banknr/mobilnr(swish):</td>
+    </tr>
+    <tr>
+      <td><input type="text"   name="G1P1_namn"></td>
+      <td><input type="number" name="G1P1_personnr"></td>
+      <td><input type="number" name="G1P1_bank/mob"></td>
+    </tr>
+    <tr>
+        <td><input type="text"   name="G1P2_namn"></td>
+        <td><input type="number" name="G1P2_personnr"></td>
+        <td><input type="number" name="G1P2_bank/mob"></td>
+    </tr>
+    <tr>
+        <td><input type="text"   name="G1P3_namn"></td>
+        <td><input type="number" name="G1P3_personnr"></td>
+        <td><input type="number" name="G1P3_bank/mob"></td>
+    </tr>
+  </table>
+
+  <h2>Generation 2</h2>
+
+  <table style="width:100%", pattern="/^-?\d+\.?\d*$/">
+      <tr>
+        <td>Namn:</td>
+        <td>Personnr:</td>
+        <td>Banknr/mobilnr(swish):</td>
+      </tr>
+      <tr>
+        <td><input type="text"   name="G2P1_namn"></td>
+        <td><input type="number" name="G2P1_personnr"></td>
+        <td><input type="number" name="G2P1_bank/mob"></td>
+      </tr>
+      <tr>
+          <td><input type="text"   name="G2P2_namn"></td>
+          <td><input type="number" name="G2P2_personnr"></td>
+          <td><input type="number" name="G2P2_bank/mob"></td>
+      </tr>
+      <tr>
+          <td><input type="text"   name="G2P3_namn"></td>
+          <td><input type="number" name="G2P3_personnr"></td>
+          <td><input type="number" name="G2P3_bank/mob"></td>
+      </tr>
+      <tr>
+          <td><input type="text"   name="G2P4_namn"></td>
+          <td><input type="number" name="G2P4_personnr"></td>
+          <td><input type="number" name="G2P4_bank/mob"></td>
+      </tr>
+      <tr>
+          <td><input type="text"   name="G2P5_namn"></td>
+          <td><input type="number" name="G2P5_personnr"></td>
+          <td><input type="number" name="G2P5_bank/mob"></td>
+      </tr>
+    </table>
+
+
+    <br><br>
+    Email:<br>
+    <input type="email" name="Contact-Email"><br><br> 
+    Förmögenhets namn (ex. "GENF T.Jahnson"):<br> 
+    <input type="text" name="GENF_namn"><br><br> 
+    Övrig information att tillägga:<br> 
+    <textarea name="Contact-Message" rows="6″ cols="20″>
+    </textarea><br><br>
+    <button type="submit" class="button button1" value="Submit">Godkänn & beställ!</button>
+</form>
+
+
+
+
+</body>
+</html>
